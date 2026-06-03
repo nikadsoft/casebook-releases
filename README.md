@@ -1,5 +1,7 @@
 # Casebook — downloads
 
+🌐 **Website:** https://nikadsoft.github.io/casebook-releases/ · 📖 **[Guide / Wiki](../../wiki)** · ❤️ **[Sponsor](https://github.com/sponsors/nikadsoft)**
+
 Public installers and release notes for **Casebook**, a desktop app for managing a
 personal family-court case. The source code is private; this repository hosts the
 downloadable installers so the app's built-in updater can find the latest version.

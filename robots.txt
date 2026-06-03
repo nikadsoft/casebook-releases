@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nikadsoft.github.io/casebook-releases/sitemap.xml
