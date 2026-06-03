@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casebook — take control of your court paperwork</title>
+<meta name="description" content="Casebook is a free desktop app for scanning, organising, searching and sharing family-court documents — kept privately on your own computer.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%234b46b5'/%3E%3Cpath d='M12 12h22a2 2 0 0 1 2 2v22H14a2 2 0 0 1-2-2z' fill='%23e8b84b'/%3E%3Cpath d='M16 16h16v2H16zM16 21h16v2H16zM16 26h12v2H16z' fill='%234b46b5'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --indigo:#4b46b5; --indigo-dark:#3a3690; --gold:#e8b84b; --ink:#1d2230;
+    --muted:#5b6173; --bg:#ffffff; --card:#f7f8fc; --line:#e6e8f2;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.6}
+  a{color:var(--indigo)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+  .btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:600;text-decoration:none;
+    transition:transform .05s ease, box-shadow .2s ease}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--gold);color:#3a2d00;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+  .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+
+  /* Hero */
+  header.hero{background:linear-gradient(160deg,var(--indigo),var(--indigo-dark));color:#fff;
+    padding:64px 0 72px}
+  .logo{width:64px;height:64px;display:block;margin-bottom:18px}
+  .hero h1{font-size:2.6rem;margin:.1em 0 .15em;letter-spacing:-.02em}
+  .hero .tag{font-size:1.25rem;opacity:.95;max-width:38ch}
+  .hero .cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .hero .os{margin-top:14px;opacity:.85;font-size:.95rem}
+
+  section{padding:54px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:1.6rem;letter-spacing:-.01em;margin:0 0 .5em}
+  .lead{font-size:1.12rem;color:var(--muted)}
+  blockquote{margin:0;border-left:4px solid var(--gold);padding:6px 0 6px 18px;color:var(--ink);
+    font-size:1.12rem}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:8px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px}
+  .card h3{margin:.1em 0 .35em;font-size:1.08rem}
+  .card p{margin:0;color:var(--muted);font-size:.97rem}
+  .emoji{font-size:1.4rem}
+
+  .pill{display:inline-block;background:#eef0fb;color:var(--indigo);border-radius:999px;
+    padding:4px 12px;font-size:.85rem;font-weight:600;margin-bottom:14px}
+  .support{background:var(--card)}
+  .center{text-align:center}
+  footer{padding:34px 0 50px;color:var(--muted);font-size:.92rem}
+  footer a{color:var(--indigo)}
+  .disc{margin-top:14px;font-size:.86rem;color:#8a90a3}
+  @media(max-width:560px){.hero h1{font-size:2.05rem}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo" viewBox="0 0 48 48" aria-hidden="true">
+      <rect width="48" height="48" rx="10" fill="#fff" opacity="0"/>
+      <rect width="48" height="48" rx="10" fill="rgba(255,255,255,.10)"/>
+      <path d="M12 12h22a2 2 0 0 1 2 2v22H14a2 2 0 0 1-2-2z" fill="#e8b84b"/>
+      <path d="M16 16h16v2H16zM16 21h16v2H16zM16 26h12v2H16z" fill="#4b46b5"/>
+    </svg>
+    <h1>Casebook</h1>
+    <p class="tag">Take control of your court paperwork — scan, organise, search and share your
+      documents, kept privately on your own computer.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://github.com/nikadsoft/casebook-releases/releases/latest">⬇️ Download Casebook</a>
+      <a class="btn btn-ghost" href="https://github.com/nikadsoft/casebook-releases/wiki">📖 Read the guide</a>
+    </div>
+    <div class="os">Free for Windows, macOS and Linux.</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Why I built this</h2>
+    <p class="lead">I created this project (with the help of Claude) after going through court four
+      times and finding the court documents overwhelming and difficult to find, reference and remind
+      myself of the content. Casebook is what I built to solve that for myself — and I'm sharing it in
+      case it helps you too.</p>
+    <ul class="lead">
+      <li>The <strong>scanner code is optimised</strong>, so hopefully it works smoothly with your scanner.</li>
+      <li>It uses a <strong>third-party OCR tool</strong> so you can <strong>search the documents you've
+        scanned</strong> — type a name, date or phrase and jump straight to the page.</li>
+      <li>There's an <strong>export facility</strong> for sending documents to your solicitor or other
+        third parties.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What it does</h2>
+    <div class="grid">
+      <div class="card"><div class="emoji">📥</div><h3>Bring everything in</h3>
+        <p>Scan documents, or import PDFs, images, Word files and text — even pull in emails from the
+          people involved in your case.</p></div>
+      <div class="card"><div class="emoji">🔎</div><h3>Make it searchable</h3>
+        <p>Pages are run through OCR so the text becomes fully searchable. Find anything in seconds, and
+          copy a page's text into another document.</p></div>
+      <div class="card"><div class="emoji">🗂️</div><h3>Organise your way</h3>
+        <p>Group documents into cases and hearings, classify them by type (statements, orders, CAFCASS,
+          solicitor, social services…), and reorder them.</p></div>
+      <div class="card"><div class="emoji">📖</div><h3>Read &amp; annotate</h3>
+        <p>A built-in viewer with zoom, rotate, highlights and notes — including notes attached to a
+          specific highlight.</p></div>
+      <div class="card"><div class="emoji">📤</div><h3>Export &amp; share</h3>
+        <p>Export to a searchable PDF or multi-page image to send on. Share securely to another computer,
+          or sync between your own devices — all end-to-end encrypted.</p></div>
+      <div class="card"><div class="emoji">🔒</div><h3>Private by design</h3>
+        <p>Everything lives on <strong>your</strong> machine. No cloud account, and nothing about your
+          case is uploaded to anyone.</p></div>
+    </div>
+    <p style="margin-top:18px"><a href="https://github.com/nikadsoft/casebook-releases/wiki/Features">See the full feature list →</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="pill">Private &amp; secure</span>
+    <h2>Your documents stay yours</h2>
+    <p class="lead">There's no sign-up and no cloud. Your cases, documents, notes and search index are
+      stored in a folder on your own computer. Sharing between devices happens directly over your local
+      network and is <strong>end-to-end encrypted</strong>; email is imported as plain text with no
+      scripts or programs ever run. <a href="https://github.com/nikadsoft/casebook-releases/wiki/Privacy-and-Security">More on privacy &amp; security →</a></p>
+  </div>
+</section>
+
+<section class="support">
+  <div class="wrap center">
+    <h2>🍺 Buy me a pint — only if you can</h2>
+    <p class="lead" style="max-width:60ch;margin:0 auto">If Casebook has genuinely helped you, and
+      you're in a position to, you're very welcome to buy me a pint as a thank-you. <strong>But please
+      don't feel you have to.</strong> I know first-hand how much going through court costs — your family
+      comes first, every time. If money's tight (and going through the courts, it very often is),
+      please just use the app with my blessing.</p>
+    <p style="margin-top:22px">
+      <a class="btn btn-primary" href="https://github.com/sponsors/nikadsoft">❤️ Buy me a pint (GitHub Sponsors)</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap center">
+    <p>
+      <a href="https://github.com/nikadsoft/casebook-releases/releases/latest">Download</a> ·
+      <a href="https://github.com/nikadsoft/casebook-releases/wiki">Guide</a> ·
+      <a href="https://github.com/nikadsoft/casebook-releases/wiki/Getting-Started">Getting started</a> ·
+      <a href="https://github.com/sponsors/nikadsoft">Support</a>
+    </p>
+    <p class="disc">Casebook is a tool for organising your own documents. It is <strong>not legal
+      advice</strong> and isn't affiliated with any court or service. Always keep your own backups of
+      important papers. © NiKAD.net.</p>
+  </div>
+</footer>
+
+</body>
+</html>
